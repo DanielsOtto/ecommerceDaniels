@@ -1,0 +1,22 @@
+// FUNCIONES
+// Mixins 
+@mixin medidasGlobal ($widthG, $heightG) {
+    width: $widthG;
+    height: $heightG;
+}
+@mixin marginAndPadding ($marginVar, $paddingVar){
+    margin: $marginVar;
+    padding: $paddingVar;
+}
+@mixin linkStyles($sizeWord, $upper, $color){
+    font-size: $sizeWord;
+    text-transform: $upper;
+    color: $color;
+}
+@mixin displayFlex ($displayF, $directionF, $wrapF, $alignIF, $justifyCF) {
+    display: $displayF;
+    flex-direction: $directionF;
+    flex-wrap: $wrapF;
+    align-items: $alignIF;
+    justify-content: $justifyCF;
+}

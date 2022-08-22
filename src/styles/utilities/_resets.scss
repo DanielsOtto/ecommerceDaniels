@@ -1,0 +1,7 @@
+*{
+    @include marginAndPadding ($zero, $zero);
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%; 
+}

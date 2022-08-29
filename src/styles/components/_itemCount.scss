@@ -1,0 +1,54 @@
+.counterBox {
+  background-color: antiquewhite;
+  width: 16%;
+  height: 20%;
+  margin: 0 auto;
+  @include displayFlex(flex, column, wrap, center, center);
+  .divNoStock{
+    margin-top: 3%;
+    padding: 2%;
+    p{
+        font-size: medium;
+    }
+  }
+  .divSiStock {
+    @include displayFlex(flex, row, nowrap, center, space-around);
+    width: 50%;
+    margin: 2% auto;
+    p {
+      text-align: center;
+      font-size: x-large;
+      font-weight: 900;
+      width: 80%;
+    }
+    button {
+      @include medidasGlobal(50%, 50%);
+      font-size: x-large;
+      color: white;
+      border: none;
+      border-radius: 12%;
+    }
+    .restar{
+        background-color: orangered;
+    }
+    .sumar{
+        background-color: lightseagreen;
+    }
+  }
+  .addCart {
+    width: 35%;
+    margin: 4%;
+    padding: 1%;
+    border: none;
+    border-radius: 12%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    background-color: green;
+    color: white;
+    &:hover {
+      background-color: greenyellow;
+      color: black;
+    }
+  }
+}

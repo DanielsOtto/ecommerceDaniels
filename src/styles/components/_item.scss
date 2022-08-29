@@ -1,0 +1,27 @@
+.boxItem{
+    @include medidasGlobal(30%, 30%);
+    @include displayFlex(flex, row, wrap, center, center);
+    margin: 3%;
+    background-color: orange;
+    .titleItem{
+        text-transform: uppercase;
+        font-size: x-large;
+    }
+    .imgItem{
+        margin: 2%;
+        @include maxMedidasGlobal(90%, 70%);
+    }
+    .infoItem{
+        width: 100%;
+        padding: 2%;
+        text-align: justify;
+        font-size: larger;
+        font-weight: 900;
+    }
+    .priceItem{
+        margin: 2%;
+        text-align: center;
+        font-size: xx-large;
+        font-weight: 700;
+    }
+}

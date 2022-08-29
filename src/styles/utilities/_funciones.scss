@@ -4,6 +4,10 @@
     width: $widthG;
     height: $heightG;
 }
+@mixin maxMedidasGlobal ($widthG, $heightG) {
+    max-width: $widthG;
+    max-height: $heightG;
+}
 @mixin marginAndPadding ($marginVar, $paddingVar){
     margin: $marginVar;
     padding: $paddingVar;

@@ -1,10 +1,11 @@
 
 .navbar_container{
     background-color: $navBar;
-    @include marginAndPadding($oneP, $oneP);
+    padding: 1%;
     @include displayFlex(flex, row, nowrap, center, space-around);
     h1{
         color: $title;
+        text-transform: uppercase;
         font-size: $fiveR;
         &:hover{
             color: $titleSec;

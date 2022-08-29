@@ -4,16 +4,16 @@ import {CartWidget} from './CartWidget';
 export const Navbar = () => {
   return (
     <div className='navbar_container'> 
-        <h1>La Tiendita</h1> 
+        <h1>the little shop</h1> 
         <ul>
           <li> 
-              <a href='#'>opcion a</a> 
+              <a href='#'>option a</a> 
           </li>
           <li> 
-              <a href='#'>opcion b</a> 
+              <a href='#'>option b</a> 
           </li>
           <li> 
-              <a href='#'>opcion c</a>
+              <a href='#'>option c</a>
           </li>
         </ul>
         <CartWidget />

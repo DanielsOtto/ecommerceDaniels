@@ -1,26 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import losLibros from '../losLibros.json';
 import ItemCount from './ItemCount';
 import ItemList from './ItemList';
+
 
 export const ItemListContainer = () => {
 
     const [prods, setProds] = useState([]);
 
-    useEffect(() => {
-        const FetchData = () => {
-            const URL = `https://api.escuelajs.co/api/v1/products?offset=1&limit=10`;
-            fetch(URL)
-                .then(res => res.json())
-                .then(data => {setProds(data);});
-        }
-        const getData = new Promise(resolve => {
+    const getClothes = (data, time) =>
+        new Promise ((resolve, rejected) =>{
             setTimeout(() => {
-                resolve(FetchData);
-            }, 3000);
-        })
-        getData.then(res => {
-            setProds(res);
+                data ? resolve(data) : rejected("Error");
+            }, time);
         });
+    
+    useEffect(()=> {
+
+        getClothes(losLibros, 2500)
+            .then(res => {
+                setProds(res);
+            })
+            .catch( err => console.log(`${err}: No hay nada para vender.`));
     }, [])
 
     const onAdd = (iValue) => {
@@ -30,9 +31,13 @@ export const ItemListContainer = () => {
     return (
         <main >
             <ItemCount stock={10} initial={1} onAdd={onAdd} />
-            <section className="sectionProds">
-                <ItemList data={prods} />
-            </section>
+            {prods?.length ?
+                <section className="sectionProds">
+                    <ItemList data={prods} />
+                </section>
+                :
+                  <div className='ubicarSpinner'>  <div class="spinner"></div>   </div>  
+            }
         </main>
     )
 }

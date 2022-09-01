@@ -1,12 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-const Item = ({title, image, info, price}) => {
+
+const Item = ({ alt, precio, escritor, titulo, stock, descripcion, img }) => {
+
   return (
     <div className='boxItem'>
-        <h2 className='titleItem'> {title}</h2>
-        <img className='imgItem' src={image} alt={title}/>
-        <p className='infoItem'> {info}</p>
-        <p className='priceItem'> Price: ${price}</p>
+      <div className='boxTitle'>
+        <h2 className='titleItem'> {titulo}</h2>
+        <p className='marcaItem'>{escritor}</p>
+      </div>
+      <img className='imgItem' src={process.env.PUBLIC_URL + img} alt={alt}/>
+      <div>
+        {/* <ItemDetail stock={stock} info={descripcion} img={img} alt={alt} /> */}
+        <p className='priceItem'> Price: ${precio}</p>
+      </div>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 {
   "name": "ecommerce_daniels",
   "version": "0.1.0",
-  "homepage": "https://danielsotto.github.io/ecommerceDaniels/",
+  "homepage": "https://danielsotto.github.io/ecommerceDaniels",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

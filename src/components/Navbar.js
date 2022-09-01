@@ -7,13 +7,13 @@ export const Navbar = () => {
         <h1>the little shop</h1> 
         <ul>
           <li> 
-              <a href='#'>option a</a> 
+              <p>option a</p> 
           </li>
           <li> 
-              <a href='#'>option b</a> 
+              <p>option b</p> 
           </li>
           <li> 
-              <a href='#'>option c</a>
+              <p>option c</p>
           </li>
         </ul>
         <CartWidget />

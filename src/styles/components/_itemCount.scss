@@ -1,25 +1,30 @@
 .counterBox {
   background-color: antiquewhite;
-  width: 16%;
-  height: 20%;
+  width: 100%;
+  height: 26%;
   margin: 0 auto;
   @include displayFlex(flex, column, wrap, center, center);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   .divNoStock{
-    margin-top: 3%;
+    margin: 2% auto;
     padding: 2%;
     p{
+        text-transform:  capitalize;
+        text-align: center;
         font-size: medium;
     }
   }
   .divSiStock {
-    @include displayFlex(flex, row, nowrap, center, space-around);
-    width: 50%;
     margin: 2% auto;
+    padding: 2%;
+    width: 80%;
+    @include displayFlex(flex, row, nowrap, center, space-around);
     p {
+      margin: 0 10%;
       text-align: center;
       font-size: x-large;
-      font-weight: 900;
-      width: 80%;
+      font-weight: 600;
+      width: 50%;
     }
     button {
       @include medidasGlobal(50%, 50%);
@@ -28,19 +33,29 @@
       border: none;
       border-radius: 12%;
     }
-    .restar{
+    .decrease{
         background-color: orangered;
+        cursor: pointer;
     }
-    .sumar{
+    .cantDecrease{
+        cursor: not-allowed;
+        color: wheat;
+    }
+    .increase{
         background-color: lightseagreen;
+        cursor: pointer;
+    }
+    .cantIncrease{
+      color: wheat;
+      cursor: not-allowed;
     }
   }
   .addCart {
-    width: 35%;
+    width: 80%;
     margin: 4%;
-    padding: 1%;
+    padding: 4%;
     border: none;
-    border-radius: 12%;
+    border-radius: 15%;
     text-align: center;
     text-transform: uppercase;
     font-weight: 300;
@@ -49,6 +64,17 @@
     &:hover {
       background-color: greenyellow;
       color: black;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+  .block{
+    @extend .addCart;
+    background-color: gray;
+    &:hover {
+      background-color: grey;
+      color: white;
+      cursor: not-allowed;
     }
   }
 }

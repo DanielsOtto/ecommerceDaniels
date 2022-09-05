@@ -1,11 +1,15 @@
 .boxItem{
-    @include medidasGlobal(30%, 30%);
+    @include medidasGlobal(35%, 35%);
     @include displayFlex(flex, column, wrap, center, center);
     margin: 3%;
+    border: none;
     background-color: gainsboro;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     .boxTitle{
+        width: 90%;
         text-align: center;
         .titleItem{
+            margin: 2%;
             text-transform: uppercase;
             font-size: x-large;
         }
@@ -15,8 +19,8 @@
         }
     }
     .imgItem{
-        margin: 2%;
-        @include maxMedidasGlobal(50%, 50%);
+        margin: 4%;
+        @include maxMedidasGlobal(37%, 37%);
     }
     .infoItem{
         width: 100%;
@@ -26,10 +30,11 @@
         font-weight: 700;
     }
     .priceItem{
+        margin: 5% 0;
         width: 100%;
-        margin: 2%;
-        text-align: center;
+        text-transform: uppercase;
         font-size: x-large;
+        text-align: center;
         font-weight: 700;
     }
 }

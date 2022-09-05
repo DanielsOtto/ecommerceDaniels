@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+  /*NavBar*/
+  .navbar_container {
+    h1 {
+      font-size: $twoR;
+    }
+  }
+  /*Item*/
+  .boxItem {
+    @include medidasGlobal(50%, 40%);
+    @include displayFlex(flex, row, wrap, center, center);
+    background-color: rgb(223, 223, 177);
+  }
+}

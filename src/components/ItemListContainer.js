@@ -1,42 +1,38 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import losLibros from '../losLibros.json';
-import ItemCount from './ItemCount';
 import ItemList from './ItemList';
-
 
 export const ItemListContainer = () => {
 
     const [prods, setProds] = useState([]);
+    const { generoId } = useParams();
 
-    const getClothes = (data, time) =>
-        new Promise ((resolve, rejected) =>{
-            setTimeout(() => {
-                data ? resolve(data) : rejected("Error");
-            }, time);
-        });
-    
-    useEffect(()=> {
+    useEffect(() => {
+        const getBooks = new Promise((resolve, rejected) => {
+                setTimeout(() => {
+                    losLibros ? resolve(losLibros) : rejected("Error");
+                }, 1500);
+            });
 
-        getClothes(losLibros, 2500)
-            .then(res => {
-                setProds(res);
-            })
-            .catch( err => console.log(`${err}: No hay nada para vender.`));
-    }, [])
+        if(generoId){
+            getBooks.then(res => setProds(res.filter(book => book.genero === generoId)))
+                .catch(err => console.log(`${err}: No hay nada para vender.`));
+        }else{
+            getBooks.then(res => setProds(res))
+                .catch(err => console.log(`${err}: No hay nada para vender.`));
+        }
+    }, [generoId]);
 
-    const onAdd = (iValue) => {
-        console.log(`El valor elegido es ${iValue}`);
-    }
 
     return (
         <main >
-            <ItemCount stock={10} initial={1} onAdd={onAdd} />
             {prods?.length ?
                 <section className="sectionProds">
                     <ItemList data={prods} />
                 </section>
                 :
-                  <div className='ubicarSpinner'>  <div class="spinner"></div>   </div>  
+                <div className='ubicarSpinner'>  <div className='spinner'></div>   </div>
             }
         </main>
     )

@@ -3,6 +3,9 @@
     background-color: $navBar;
     padding: 1%;
     @include displayFlex(flex, row, nowrap, center, space-around);
+    a{
+        text-decoration: none;
+    }
     h1{
         color: $title;
         text-transform: uppercase;
@@ -13,11 +16,11 @@
         }
     }
     ul{
-        width: $twentFve;
-        // background-color: red;
+        width: 30%;
         @include displayFlex(flex, row, nowrap, center, space-around);
         list-style: none;
         li{
+            width: auto;
             font-size: 1.5rem;
             text-transform: uppercase;
             font-weight: 700;

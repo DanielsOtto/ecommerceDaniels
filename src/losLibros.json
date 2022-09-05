@@ -2,7 +2,7 @@
     {
       "id": "1",
       "titulo": "1984",
-      "genero": "Ciencia ficción",
+      "genero": "ficcion",
       "escritor": "George Orwell",
       "paginas": 250,
       "precio": 7400,
@@ -13,146 +13,146 @@
     },
     {
       "id": "2",
-      "titulo": "Africanus, el hijo del consul",
-      "genero": "Novela histórica",
-      "escritor": "Santiago Posteguillo",
-      "paginas": 850,
+      "titulo": "Harry Potter y la orden del fénix",
+      "genero": "fantasia",
+      "escritor": "Joanne K. Rowling",
+      "paginas": 550,
       "precio": 8200,
-      "descripcion": "Africanus: el hijo del cónsul, es la primera parte de la trilogía del mismo nombre. En esta novela nos narra el nacimiento de Publio Cornelio Escipión en el seno de una de las familias más importantes de la antigua Roma: los Escipiones dentro de la rama Cornelia. Asistimos a su formación académica y militar (a cargo de su padre Publio y su tío Cneo respectivamente) y a sus primeras campañas militares (con el heroico rescate de su propio padre, cónsul de Roma, en la Batalla del Ticino). Por último le acompañamos en su primera gran victoria como general romano (a los 25 años), al conquistar la inexpugnable Cartago Nova (capital cartaginesa en Hispania), la actual Cartagena.",
-      "alt": "best seller, Africanus",
-      "img": "/img/libros/africanus.png",
-      "cantidad": 2
+      "descripcion": "Las tediosas vacaciones de verano en casa de sus tíos todavía no han acabado y Harry se encuentra más inquieto que nunca. Apenas ha tenido noticias de Ron y Hermione, y presiente que algo extraño está sucediendo en Hogwarts.",
+      "alt": "best seller, Harry Potter y la orden del fénix",
+      "img": "/img/libros/hpOrdenFenix.png",
+      "stock": 4
     },
     {
       "id": "3",
       "titulo": "Cell",
-      "genero": "Terror",
+      "genero": "terror",
       "escritor": "Stephen King",
       "paginas": 450,
       "precio": 5400,
       "descripcion": "Cell es una novela de horror apocalíptico publicado por el autor Americano Stephen King en enero de 2006. La trama se refiere a un artista de Nueva Inglaterra que lucha por reunirse con su hijo después que una misteriosa señal de teléfono celular convierte a los seres humanos en zombies",
       "alt": "best seller, Cell",
       "img": "/img/libros/cell.png",
-      "cantidad": 33
+      "stock": 33
     },
     {
       "id": "4",
       "titulo": "Dune",
-      "genero": "Ciencia ficción",
+      "genero": "cienciaFiccion",
       "escritor": "Frank Herbert",
       "paginas": 400,
       "precio": 8500,
       "descripcion": "Dune relata la historia del planeta desértico Arrakis, única fuente de melange, la especia necesaria para el viaje interestelar y que además garantiza longevidad y poderes psíquicos. La administración de Arrakis es transferida por el emperador de la noble Casa de Harkonnen a la Casa Atreides",
       "alt": "best seller, Dune",
       "img": "/img/libros/dune.png",
-      "cantidad": 0
+      "stock": 0
     },
     {
       "id": "5",
       "titulo": "Dios emperador de dune",
-      "genero": "Ficción",
+      "genero": "cienciaFiccion",
       "escritor": "Frank Herbert",
       "paginas": 600,
       "precio": 9000,
       "descripcion": "Esta cuarta entrega de Dune centra su trama en la figura mesiánica de Leto Atreides II (hijo de Paul Atreides, héroe cuya estirpe hunde sus raíces en la legendaria casa griega de los Atridas) y nos lleva, a través de diversos dilemas éticos, a comprender los mitos que necesita la humanidad y a los héroes que los encarnan. El futuro, en el mundo de Dune, pertenece solo a los que son capaces de pensar por sí mismos... ",
       "alt": "Novela de ficción, Dios emperador de dune",
       "img": "/img/libros/emperador-dune.png",
-      "cantidad": 1
+      "stock": 2
     },
     {
       "id": "6",
       "titulo": "La verdad sobre el caso Harry Quebert",
-      "genero": "Ficción",
-      "escritor": "George Orwell",
+      "genero": "policial",
+      "escritor": "Joël Dicker",
       "paginas": 950,
       "precio": 7400,
       "descripcion": "En 2008, Marcus Goldman, un joven escritor, visita a su mentor -Harry Quebert, autor de una aclamada novela- y descubre que éste tuvo una relación secreta con Nola Kellergan. Poco después, Harry es arrestado y acusado de asesinato al encontrarse el cadáver de Nola enterrado en su jardín.",
       "alt": "best seller, La verdad sobre el caso Harry Quebert",
       "img": "/img/libros/hquebert.png",
-      "cantidad": 1
+      "stock": 1
     },
     {
      "id": "7",
       "titulo": "La milla verde",
-      "genero": "Terror",
+      "genero": "terror",
       "escritor": "Stephen King",
       "paginas": 400,
       "precio": 8000,
       "descripcion": "Octubre de 1932, penitenciaría de Cold Mountain. Los condenados a muerte aguardan el momento de ser conducidos a la silla eléctrica. Los crímenes abominables que han cometido les convierten en carnaza de un sistema legal que se alimenta de un círculo de locura, muerte y venganza. Y en esa antesala del infierno Stephen King traza una pavorosa radiografía del horror en estado puro. Todo un hito en la aclamada trayectoria del maestro indiscutible de la narrativa de terror contemporánea.",
       "alt": "best seller, La milla verde",
       "img": "/img/libros/millaverde.png",
-      "cantidad": 0
+      "stock": 5
     },
     {
      "id": "8",
       "titulo": "El soborno",
-      "genero": "Ficción",
+      "genero": "ficcion",
       "escritor": "John Grisham",
       "paginas": 450,
       "precio": 5400,
       "descripcion": "Lacy Stoltz es una joven investigadora y abogada de Florida, y su trabajo consiste en responder a las demandas relacionadas con la mala praxis judicial. Tras nueve años en el puesto, sabe que la mayor parte de los problemas derivan de incompetencias. De repente le llega un caso de corrupción. Greg Myers afirma conocer un juez de Florida que ha robado más dinero que el resto de los jueces poco honestos juntos.",
       "alt": "best seller, El soborno",
       "img": "/img/libros/soborno.png",
-      "cantidad": 1
+      "stock": 15
     },
     {
      "id": "9",
-      "titulo": "Las legiones malditas",
-      "genero": "Novela histórica",
-      "escritor": "Santiago Posteguillo",
-      "paginas": 1050,
+      "titulo": "Harry Potter y el prisionero de Azkaban",
+      "genero": "fantasia",
+      "escritor": "Joanne K. Rowling",
+      "paginas": 410,
       "precio": 8400,
-      "descripcion": "Las legiones malditas es la segunda parte de la novela Africanus: el hijo del cónsul, con la que el autor español Santiago Posteguillo inició su trilogía sobre el estadista y militar romano Escipión el Africano vencedor de Aníbal en la batalla de Zama.",
-      "alt": "best seller, Las legiones malditas",
-      "img": "/img/libros/legionesmalditas.png",
-      "cantidad": 2
+      "descripcion": "Harry aguarda con impaciencia el inicio del tercer curso en el Colegio Hogwarts de Magia y Hechicería. Tras haber cumplido trece años, solo y lejos de sus amigos de Hogwarts, Harry se pelea con su bigotuda tía Marge, a la que convierte en globo, y debe huir en un autobús mágico.",
+      "alt": "best seller, Harry Potter y el prisionero de Azkaban",
+      "img": "/img/libros/harryPotterAzkaban.png",
+      "stock": 11
     },
     {
      "id": "10",
       "titulo": "Harry Potter y la piedra filosofal",
-      "genero": "Fantasía",
+      "genero": "fantasia",
       "escritor": "Joanne K. Rowling",
       "paginas": 250,
       "precio": 8400,
       "descripcion": "Harry Potter se ha quedado huérfano y vive en casa de sus abominables tíos y del insoportable primo Dudley. Se siente muy triste y solo, hasta que un buen día recibe una carta que cambiará su vida para siempre. En ella le comunican que ha sido aceptado como alumno en el colegio interno Hogwarts de magia y hechicería. A partir de ese momento, la suerte de Harry da un vuelco espectacular. En esa escuela tan especial aprenderá encantamientos, trucos fabulosos y tácticas de defensa contra las malas artes. Se convertirá en el campeón escolar de quidditch, especie de fútbol aéreo que se juega montado sobre escobas, y hará un puñado de buenos amigos... aunque también algunos temibles enemigos. Pero, sobre todo, conocerá los secretos que le permitirán cumplir con su destino. Pues, aunque no lo parezca a primera vista, Harry no es un chico común y corriente. íEs un verdadero mago!",
       "alt": "best seller, Harry Potter y la piedra filosofal",
       "img": "/img/libros/harrypotter.png",
-      "cantidad": 1
+      "stock": 5
     },
     {
      "id": "11",
-      "titulo": "Sensatez y sentimiento",
-      "genero": "Novela romántica",
-      "escritor": "Jane Austen",
-      "paginas": 330,
-      "precio": 7000,
-      "descripcion": "-",
-      "alt": "best seller, Sensatez y sentimiento",
-      "img": "/img/libros/sensatez.png",
-      "cantidad": 0
+      "titulo": "El informe Pelícano",
+      "genero": "ficcion",
+      "escritor": "John Grisham",
+      "paginas": 370,
+      "precio": 5000,
+      "descripcion": "Dos jueces del Tribunal Supremo aparecen muertos. Solo una persona ha conectado ambos crímenes, y lo ha hecho por escrito en un informe judicial. En Nueva Orleans, la brillante, bella y ambiciosa estudiante de Derecho Darby Shaw intuye que lo especulado en su informe ha llegado a oídos de los más altos poderes de Washington y causará un oleaje difícil de controlar. Una repercusión que reducirá a partículas al novio de Darby tras la explosión de una bomba, que enviará a asesinos a sueldo por su cabeza y que la perseguirá por todo el país mientras intenta dar con el reportero de investigación Gray Grantham, el único hombre que está tan cerca de la verdad como ella.",
+      "alt": "best seller, el informe Pelícano",
+      "img": "/img/libros/informePelicano.png",
+      "stock": 6
     },
     {
      "id": "12",
       "titulo": "El sueño de sooley",
-      "genero": "Ficción",
+      "genero": "ficcion",
       "escritor": "John Grisham",
       "paginas": 350,
       "precio": 7400,
       "descripcion": "Samuel Sooleymon es un adolescente de Sudán del Sur con un gran amor por el baloncesto, un salto prodigioso y la velocidad del rayo. Un torneo de exhibición por Estados Unidos puede convertirse en su gran oportunidad, pero sus condiciones naturales necesitan trabajo y Sooley pronto se da cuenta de que le queda un largo camino por recorrer.",
       "alt": "Novela, El sueño de sooley",
       "img": "/img/libros/sooley.png",
-      "cantidad": 0
+      "stock": 20
     },
     {
      "id": "13",
-      "titulo": "La máquina de la verdad",
-      "genero": "Ciencia ficción",
-      "escritor": "James Halperin",
-      "paginas": 950,
-      "precio": 5000,
-      "descripcion": "En 2008, Marcus Goldman, un joven escritor, visita a su mentor -Harry Quebert, autor de una aclamada novela- y descubre que éste tuvo una relación secreta con Nola Kellergan. Poco después, Harry es arrestado y acusado de asesinato al encontrarse el cadáver de Nola enterrado en su jardín.",
-      "alt": "Novela, la máquina de la verdad",
-      "img": "/img/libros/truth_machine.png",
-      "cantidad": 2
+      "titulo": "Theodore Boone",
+      "genero": "ficcion",
+      "escritor": "John Grisham",
+      "paginas": 250,
+      "precio": 2000,
+      "descripcion": "Theodore Boone es un chico de trece años con las ideas muy claras. Ya conoce todos los pormenores de la vida judicial de su pequeña ciudad, Strattenburg, y espera con ansia el día en que se convierta en abogado. Pero ni en sus mejores sueños hubiera podido imaginar que se vería involucrado en el llamado juicio del siglo... íantes siquiera de terminar la secundaria! No hay suficientes pruebas para condenar al rico golfista Peter Duffy por el asesinato de su esposa; pero Theo cuenta con un testigo que puede cambiar el curso de los acontecimientos... Solo hay un problema: un inviolable pactode silencio le impide llevarlo a los tribunales...",
+      "alt": "Novela, Theodore Boom",
+      "img": "/img/libros/theordoroB.png",
+      "stock": 0
     }
   ]

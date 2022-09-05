@@ -1,27 +1,34 @@
 import React, { useState } from 'react'
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial}) => {
 
     let [count, setCount] = useState(initial);
     
     const aumentar = () => count < stock && setCount(next => next +1);
-    const disminuir = () => count > 1 && setCount(prev => prev -1);
+    const disminuir = () => count > 0 && setCount(prev => prev -1);
+    let btnAdd = 'addCart';
+    let btnIncrease = 'increase';
+    let btnDecrease = 'decrease';
     
+    stock === 0 && (btnAdd = 'block');
+    count === stock && (btnIncrease = 'cantIncrease');
+    count === 0 && (btnDecrease = 'cantDecrease');
+
     return (
         <div className='counterBox' >
             {stock === 0 ? (
                 <div className='divNoStock'>
-                    <p>No stock available.</p>
+                    <p>sin stock.</p>
                 </div>
             ) : (
                 <div className='divSiStock'>
-                    <button className='restar' onClick={() => disminuir()} disabled={count === initial}> - </button>
+                    <button className={btnDecrease} onClick={() => disminuir()} disabled={count === initial}> - </button>
                     <p>{count}</p>
-                    <button className='sumar' onClick={() => aumentar()} disabled={count === stock}> + </button>
+                    <button className={btnIncrease} onClick={() => aumentar()} disabled={count === stock}> + </button>
                     {/* boton limpiar ? */}
                 </div>
             )}
-            <button className='addCart' onClick={() => onAdd(count)} disabled={stock === 0} > add</button>
+            <button className={btnAdd} disabled={stock === 0} > agregar</button>
         </div>
     )
 }

@@ -1,0 +1,41 @@
+.box-detail {
+  @include medidasGlobal(75%, 30%);
+  @include displayFlex(flex, row, nowrap, center, center);
+  background-color:  rgb(223, 223, 177);
+  margin: 2% auto;
+  padding: 2%;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  img {
+    @include maxMedidasGlobal(30%, 20%);
+  }
+  .box-info {
+    @include displayFlex(flex, column, wrap, center, space-evenly);
+    h2 {
+        text-transform: uppercase;
+        font-size: xx-large;
+        text-align: center;
+    }
+    h4{
+        font-size: large; 
+    }
+    p{
+        padding: 3%;
+        font-size: large;
+        font-weight: 500;
+        text-align: justify;
+    }
+    .price{
+        text-transform: uppercase;
+        font-size: xx-large;
+    }
+
+    .box-info__buy{
+        margin: 5%;
+        @include medidasGlobal(85%, 30%);
+        @include displayFlex(flex, row, nowrap, center, space-between);
+        .pages{
+            text-transform: capitalize;
+        }
+    }
+  }
+}

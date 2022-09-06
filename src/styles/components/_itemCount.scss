@@ -1,17 +1,20 @@
 .counterBox {
   background-color: antiquewhite;
-  width: 100%;
-  height: 26%;
-  margin: 0 auto;
+  width: 20%;
+  height: 20%;
+  margin: 0;
   @include displayFlex(flex, column, wrap, center, center);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   .divNoStock{
     margin: 2% auto;
     padding: 2%;
-    p{
-        text-transform:  capitalize;
+    .noStock{
+        width: 100%;
+        margin: 0;
+        padding: 1%;
+        text-transform:  uppercase;
         text-align: center;
-        font-size: medium;
+        font-size: small;
     }
   }
   .divSiStock {

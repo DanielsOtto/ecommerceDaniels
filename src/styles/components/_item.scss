@@ -29,12 +29,32 @@
         font-size: larger;
         font-weight: 700;
     }
-    .priceItem{
-        margin: 5% 0;
-        width: 100%;
-        text-transform: uppercase;
-        font-size: x-large;
-        text-align: center;
-        font-weight: 700;
+    .boxItem__pab{
+        @include displayFlex(flex, row, nowrap, center, space-evenly);
+        @include medidasGlobal(70%, 20%);
+        .btn-detail{
+            border: none;
+            text-transform: uppercase;
+            font-size: larger;
+            font-weight: 900;
+            background-color: cadetblue;
+            .btn-link{
+                padding: 3%;
+                text-decoration: none;
+                color: white;
+            }
+            &:hover{
+                background-color: burlywood;
+                cursor: pointer;
+            }
+        }
+        .priceItem{
+            margin: 2%;
+            padding: 1%;
+            text-transform: uppercase;
+            font-size: x-large;
+            text-align: center;
+            font-weight: 700;
+        }
     }
 }

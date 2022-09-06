@@ -5,25 +5,27 @@ import ItemDetail from './ItemDetail';
 
 export const ItemDetailContainer = () => {
 
-    const [books, setBooks] = useState([]);
+    const [book, setBook] = useState({});
     const { detailId } = useParams();
-
     useEffect(() => {
-        const getBooks = new Promise((resolve, rejected) => {
+        const getBook = new Promise((resolve, rejected) => {
             setTimeout(() => {
                 losLibros ? resolve(losLibros) : rejected("Error");
             }, 1500);
         });
 
-        getBooks
-            .then(detailId && (res => setBooks(res.filter(book => book.id === detailId))))
+        getBook
+            .then(detailId && (res => setBook(res.find(bk => bk.id === detailId))))
             .catch(err => console.log(`${err}: No hay nada para vender.`));
     }, [detailId])
 
     return (
-
         <section>
-            <ItemDetail {...books} />
+            { Object.entries(book).length === 0 ? 
+                <div className='ubicarSpinner'>  <div className='spinner'></div>   </div>
+            :
+               <ItemDetail {...book} />
+            }
         </section>
     )
 }

@@ -1,34 +1,35 @@
 import React from 'react';
 import { CartWidget } from './CartWidget';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
   return (
     <nav className='navbar_container'>
-      <Link to={'/'}><h1>la tiendita</h1></Link>
+      <NavLink to={'/'}><h1>la tiendita</h1></NavLink>
       <ul>
         <li>
-          <Link to={'/todos'}><p>todos</p></Link>
+          <NavLink to={'/todos'} className={({ isActive }) => isActive ? "active" : ""} >
+            <p>todos</p></NavLink>
         </li>
         <li>
-          <Link to={'/genero/cienciaFiccion'}>
-            ciencia ficción</Link>
+          <NavLink to={'/genero/cienciaFiccion'} className={({ isActive }) => isActive ? "active" : ""}>
+            ciencia ficción</NavLink>
         </li>
         <li>
-          <Link to={'/genero/fantasia'}>
-            fantasía</Link>
+          <NavLink to={'/genero/fantasia'} className={({ isActive }) => isActive ? "active" : ""}>
+            fantasía</NavLink>
         </li>
         <li>
-          <Link to={'/genero/ficcion'}>
-            ficción</Link>
+          <NavLink to={'/genero/ficcion'} className={({ isActive }) => isActive ? "active" : ""}>
+            ficción</NavLink>
         </li>
         <li>
-          <Link to={'/genero/policial'}>
-            policial</Link>
+          <NavLink to={'/genero/policial'} className={({ isActive }) => isActive ? "active" : ""}>
+            policial</NavLink>
         </li>
         <li>
-          <Link to={'/genero/terror'}>
-            terror</Link>
+          <NavLink to={'/genero/terror'} className={({ isActive }) => isActive ? "active" : ""}>
+            terror</NavLink>
         </li>
       </ul>
       {/* <Link to={'/cart'}>

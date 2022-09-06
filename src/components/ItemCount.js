@@ -18,7 +18,7 @@ const ItemCount = ({ stock, initial}) => {
         <div className='counterBox' >
             {stock === 0 ? (
                 <div className='divNoStock'>
-                    <p>sin stock.</p>
+                    <p className='noStock'>sin stock.</p>
                 </div>
             ) : (
                 <div className='divSiStock'>

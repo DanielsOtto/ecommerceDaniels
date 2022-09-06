@@ -1,6 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-import ItemCount from './ItemCount';
+import { Link } from 'react-router-dom';
 
 const Item = ({ alt, precio, escritor, titulo, id,stock, img }) => {
   return (
@@ -10,17 +9,13 @@ const Item = ({ alt, precio, escritor, titulo, id,stock, img }) => {
         <p className='marcaItem'>{escritor}</p>
       </div>
       <img className='imgItem' src={process.env.PUBLIC_URL + img} alt={alt}/>
-      <div>
-        {/* <ItemDetail stock={stock} info={descripcion} img={img} alt={alt} /> */}
-
-        {/* <button>
-          <Link to={`/detalle/${id}`}>
+      <div className="boxItem__pab">
+        <p className='priceItem'> ar$ {precio}</p>
+        <button className='btn-detail'>
+          <Link className="btn-link" to={`/detalle/${id}`}>
               mas información
           </Link>
-        </button> */}
-        
-        <ItemCount stock={stock} initial={0}/>
-        <p className='priceItem'> ar$ {precio}</p>
+        </button>
       </div>
     </div>
   )

@@ -32,6 +32,11 @@
                 &:hover{
                     color: $title;
                 }
+                
+            }
+            .active{
+                font-weight: bold;
+                color: #61dafb;
             }
         }
     }

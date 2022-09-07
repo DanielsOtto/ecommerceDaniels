@@ -1,8 +1,16 @@
 @media (max-width: 768px) {
   /*NavBar*/
   .navbar_container {
-    h1 {
-      font-size: $twoR;
+    @include displayFlex(flex, row, wrap, center, center);
+    .container-h1{
+      width: 60%;
+      h1 {
+        font-size: $fiveR;
+      }
+    }
+    .container-gender{
+      width: 80%;
+      order: 2;
     }
   }
   /*Item*/

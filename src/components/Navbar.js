@@ -5,12 +5,10 @@ import { NavLink } from 'react-router-dom';
 export const Navbar = () => {
   return (
     <nav className='navbar_container'>
-      <NavLink to={'/'}><h1>la tiendita</h1></NavLink>
-      <ul>
-        <li>
-          <NavLink to={'/todos'} className={({ isActive }) => isActive ? "active" : ""} >
-            <p>todos</p></NavLink>
-        </li>
+      <div className='container-h1'>
+        <NavLink to={'/'}><h1>la tiendita</h1></NavLink>
+      </div>
+      <ul className='container-gender' >
         <li>
           <NavLink to={'/genero/cienciaFiccion'} className={({ isActive }) => isActive ? "active" : ""}>
             ciencia ficción</NavLink>
@@ -32,10 +30,11 @@ export const Navbar = () => {
             terror</NavLink>
         </li>
       </ul>
-      {/* <Link to={'/cart'}>
-       
-      </Link> */}
-      <CartWidget />
+      <div className='container-cart'>
+        <NavLink to={'/cart'}>
+          <CartWidget />
+        </NavLink>
+      </div>
     </nav >
   )
 }

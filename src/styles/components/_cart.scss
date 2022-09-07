@@ -1,0 +1,9 @@
+.box-cart{
+    @include medidasGlobal(80%, 50%);
+    margin: 5% auto;
+    background-color: burlywood;
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-weight: 900;
+    text-align: center;
+}

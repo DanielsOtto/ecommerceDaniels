@@ -2,7 +2,7 @@ import { Navbar } from './components/Navbar';
 import { ItemListContainer } from './components/ItemListContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ItemDetailContainer } from './components/ItemDetailContainer';
-import {Home} from './components/Home';
+import {Cart} from './components/Cart';
 
 function App() {
 
@@ -11,11 +11,10 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route exact path='/' element={ <Home />} />
-          <Route exact path='/todos' element={ <ItemListContainer />} />
+          <Route exact path='/' element={ <ItemListContainer />} />
           <Route exact path='/genero/:generoId' element={<ItemListContainer/>} />
           <Route exact path='/detalle/:detailId' element={<ItemDetailContainer/>} />
-          <Route exact path='/cart' element /> 
+          <Route exact path='/cart' element={<Cart/>} /> 
         </Routes>
       </BrowserRouter>
     </div>

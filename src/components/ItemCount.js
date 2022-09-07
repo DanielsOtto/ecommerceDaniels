@@ -11,8 +11,8 @@ const ItemCount = ({ stock, initial}) => {
     let btnDecrease = 'decrease';
     
     stock === 0 && (btnAdd = 'block');
-    count === stock && (btnIncrease = 'cantIncrease');
     count === 0 && (btnDecrease = 'cantDecrease');
+    count === stock && (btnIncrease = 'cantIncrease');
 
     return (
         <div className='counterBox' >

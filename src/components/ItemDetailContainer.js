@@ -7,6 +7,7 @@ export const ItemDetailContainer = () => {
 
     const [book, setBook] = useState({});
     const { detailId } = useParams();
+    
     useEffect(() => {
         const getBook = new Promise((resolve, rejected) => {
             setTimeout(() => {
@@ -24,7 +25,7 @@ export const ItemDetailContainer = () => {
             { Object.entries(book).length === 0 ? 
                 <div className='ubicarSpinner'>  <div className='spinner'></div>   </div>
             :
-               <ItemDetail {...book} />
+               <ItemDetail book={book} />
             }
         </section>
     )

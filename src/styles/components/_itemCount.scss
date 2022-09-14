@@ -71,6 +71,25 @@
       cursor: pointer;
     }
   }
+  .goCart{
+    margin: 5%;
+    padding: 4%;
+    width: auto;
+    border: none;
+    border-radius: 13%;
+    font-size: medium;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    &:hover {
+      background-color: lightblue;
+      color: black;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
   .block{
     @extend .addCart;
     background-color: gray;

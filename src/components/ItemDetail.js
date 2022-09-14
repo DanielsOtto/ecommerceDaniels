@@ -1,7 +1,18 @@
 import React from 'react';
+import { useCart } from '../context/CartContext';
 import ItemCount from './ItemCount';
 
-const MasInforacion = ({ stock, titulo, img, alt, descripcion, precio, escritor, paginas }) => {
+const MasInforacion = ({ book }) => {
+
+  const { stock, titulo, img, alt, descripcion, precio, escritor, paginas } = book
+  const {addToCart} = useCart();
+
+  const onAdd =(count) => {
+   
+    console.log(`Se solicitaron ${count} copias del libro ${book.titulo} `);
+    addToCart(book, count);
+  }
+
   return (
     <div className='box-detail'>
       <img src={process.env.PUBLIC_URL + img} alt={alt} />
@@ -12,7 +23,7 @@ const MasInforacion = ({ stock, titulo, img, alt, descripcion, precio, escritor,
         <p className='price'>ar$ {precio}</p>
         <div className='box-info__buy'>
           <p className='pages'>páginas: {paginas}</p>
-          <ItemCount stock={stock} initial={0} />
+          <ItemCount stock={stock} initial={0} onAdd={onAdd}/>
         </div>
       </div>
       {/* boton volver */}

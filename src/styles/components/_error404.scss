@@ -1,0 +1,16 @@
+.box-error404{
+    @include displayFlex(flex, row, wrap, center, center);
+    @include medidasGlobal(50%, 50%);
+    margin: 10% auto;
+    h2{
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: xx-large;
+        color: red;
+    }
+    p{
+        font-size: large;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,16 @@
+.cleanAll{
+    margin: 2%;
+    padding: 1%;
+    width: 15%;
+    border-radius: 8%;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: red;
+    color: white;
+    border: none;
+    &:hover{
+        background-color: orange;
+        color: black;
+        cursor: pointer;
+    }
+}

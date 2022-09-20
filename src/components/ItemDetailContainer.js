@@ -1,23 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import { getDoc, getFirestore, doc } from 'firebase/firestore';
 import { useParams } from 'react-router-dom';
-import losLibros from '../losLibros.json';
 import ItemDetail from './ItemDetail';
 
 export const ItemDetailContainer = () => {
 
     const [book, setBook] = useState({});
     const { detailId } = useParams();
-    
-    useEffect(() => {
-        const getBook = new Promise((resolve, rejected) => {
-            setTimeout(() => {
-                losLibros ? resolve(losLibros) : rejected("Error");
-            }, 1500);
-        });
 
-        getBook
-            .then(detailId && (res => setBook(res.find(bk => bk.id === detailId))))
-            .catch(err => console.log(`${err}: No hay nada para vender.`));
+    useEffect(() => {
+        const db = getFirestore();
+        getDoc(doc(db, "libros", detailId))
+            .then( res=> setBook( ({id: res.id, ...res.data()}) ));
     }, [detailId])
 
     return (

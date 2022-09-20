@@ -11,37 +11,43 @@ export const CartProvider = ({defaultValue = [], children}) => {
     const array = [...cart];
 
     const addToCart = (item, count) => {
-        console.log({...item, count});
 
         if(cart.find(book=> book.id === item.id)){
-            console.log("objeto repetido"); 
 
             let index = array.findIndex((book) => book.id === item.id);
-            console.log("que indice das "+index)
-            console.log("aux q das  "+ array[index]);
             array[index].count += count;
             let aux = {...array[index]}; // copio el objeto
             setCart([aux]);
-            console.log("count q das "+array[index].count);
+            
         }else{
             // articulo nuevo en el carrito
             setCart([...cart, {...item, count}]);
           }
     }
 
+    const totalItemsCarrito = ()=> {
+        return array.reduce((current, obj) => current + obj.count , 0);
+    }
+
     const removeAll = () => {
-        setCart([]);
+        return setCart([]); 
     }
     
     const removeOne = (id) => {
-        setCart(prevState => prevState.filter(book => book.id !== id));
+        return setCart(prevState => prevState.filter(book => book.id !== id));
+    }
+
+    const totalPrice = ()=> {
+        return array.reduce((current, obj)=> current + obj.precio*obj.count ,0);
     }
 
     const context = {
         cart,
         addToCart,
         removeAll,
-        removeOne
+        removeOne,
+        totalItemsCarrito,
+        totalPrice
     };
 
     return (

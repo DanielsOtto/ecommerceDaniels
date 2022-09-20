@@ -6,6 +6,7 @@
 @import './utilities/resets';
 
 // components
+@import './components/buttons';
 @import './components/index';
 @import './components/navbar';
 @import './components/ItemListContainer';
@@ -14,4 +15,5 @@
 @import './components/mediaQuery';
 @import './components/itemDetail';
 @import './components/cart';
+@import './components/cartWidget';
 @import './components/error404';

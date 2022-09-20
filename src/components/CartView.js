@@ -1,19 +1,15 @@
 import React from 'react';
 import { useCart } from '../context/CartContext';
 
-/* SIN USO */
-export const ItemCart = ({ titulo, img, alt, descripcion, precio, escritor, paginas }) => {
-
-    const {removeOne, cart} = useCart();
-    const addEventHandler = (id)=> {
-
+export const CartView = ({ titulo, img, alt, descripcion, precio, escritor, paginas, count, id }) => {
+    const { removeOne } = useCart();
+    const addEventHandler = (id) => {
         removeOne(id);
-        console.log("que pasa "+ cart);
     }
 
     return (
         <div className='box-detail'>
-            <img src={process.env.PUBLIC_URL + img} alt={alt} />
+            <img src={img} alt={alt} />
             <div className='box-info'>
                 <h2>{titulo}</h2>
                 <h4>{escritor}</h4>
@@ -21,7 +17,8 @@ export const ItemCart = ({ titulo, img, alt, descripcion, precio, escritor, pagi
                 <p className='price'>ar$ {precio}</p>
                 <div className='box-info__buy'>
                     <p className='pages'>páginas: {paginas}</p>
-                    <button onClick={addEventHandler}>eliminar</button>
+                    <p className='pages'>solicito {count} libros</p>
+                    <button className='cleanAll' onClick={()=> addEventHandler(id) }>eliminar</button>
                 </div>
             </div>
         </div>

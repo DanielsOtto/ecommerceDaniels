@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import { useParams } from 'react-router-dom';
-import losLibros from '../losLibros.json';
 import ItemList from './ItemList';
 
 export const ItemListContainer = () => {
@@ -9,31 +9,30 @@ export const ItemListContainer = () => {
     const { generoId } = useParams();
 
     useEffect(() => {
-        const getBooks = new Promise((resolve, rejected) => {
-                setTimeout(() => {
-                    losLibros ? resolve(losLibros) : rejected("Error");
-                }, 1500);
-            });
+        const db = getFirestore();
+        const itemsCollections = collection(db, 'libros');
 
-        if(generoId){
-            getBooks.then(res => setProds(res.filter(book => book.genero === generoId)))
+        if (generoId) {
+            // console.log("que me estas dando " + generoId);
+            const qFilter = query(itemsCollections, where('genero', '==', generoId));
+            getDocs(qFilter)
+                .then(snapshot => {
+                    setProds(snapshot.docs.map(res => ({ id: res.id, ...res.data() })));
+                })
                 .catch(err => console.log(`${err}: No hay nada para vender.`));
-        }else{
-            getBooks.then(res => setProds(res))
-                .catch(err => console.log(`${err}: No hay nada para vender.`));
+        } else {
+            getDocs(itemsCollections)
+                .then(snapshot => {
+                    setProds(snapshot.docs.map(res => ({ id: res.id, ...res.data() })));
+                });
         }
     }, [generoId]);
 
-
     return (
         <main >
-            {prods?.length ?
-                <section className="sectionProds">
-                    <ItemList data={prods} />
-                </section>
-                :
-                <div className='ubicarSpinner'>  <div className='spinner'></div>   </div>
-            }
+            <section className="sectionProds">
+                <ItemList data={prods} />
+            </section>
         </main>
     )
 }

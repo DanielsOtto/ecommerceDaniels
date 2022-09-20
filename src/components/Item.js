@@ -8,7 +8,7 @@ const Item = ({ alt, precio, escritor, titulo, id, img }) => {
         <h2 className='titleItem'> {titulo}</h2>
         <p className='marcaItem'>{escritor}</p>
       </div>
-      <img className='imgItem' src={process.env.PUBLIC_URL + img} alt={alt}/>
+      <img className='imgItem' src={img} alt={alt}/>
       <div className="boxItem__pab">
         <p className='priceItem'> ar$ {precio}</p>
         <button className='btn-detail'>

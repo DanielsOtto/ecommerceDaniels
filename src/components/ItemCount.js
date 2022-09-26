@@ -42,7 +42,9 @@ const ItemCount = ({ stock, initial, onAdd }) => { // vienen de contexto
                 </div>
             )}
             {cambiar ?
-                <button className={btnAdd} disabled={stock === 0} onClick={addEventHandler}>agregar</button>
+                (
+                    <button className={btnAdd} disabled={stock === 0} onClick={addEventHandler}>agregar</button>
+                )
                 :
                 (<Link className="btn-link" to={'/cart'}>
                     <button className='goCart'>carrito</button>

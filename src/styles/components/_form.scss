@@ -1,0 +1,60 @@
+form {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  width: 40%;
+  height: 40%;
+  background-color: cornsilk;
+  margin: 2% auto;
+  display: flex;
+  flex-wrap: wrap;
+  div {
+    width: 100%;
+    margin: 1%;
+    label {
+      margin: 2%;
+      padding: 1%;
+      font-size: medium;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: left;
+    }
+    input {
+      width: 100%;
+      padding: 3%;
+    }
+    .error {
+      color: red;
+      font-size: small;
+      font-weight: 700;
+    }
+  }
+  .btn-box {
+    display: flex;
+    justify-content: center;
+    button {
+      margin: 2%;
+      padding: 1.5%;
+      background-color: blue;
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: none;
+      &:hover {
+        background-color: lightskyblue;
+        color: black;
+        cursor: pointer;
+      }
+    }
+  }
+  .good-msg-box {
+    display: flex;
+    justify-content: center;
+    .exito {
+        margin: 1%;
+        font-size: small;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: green;
+    }
+  }
+}

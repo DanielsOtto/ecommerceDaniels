@@ -18,7 +18,6 @@ export const CartProvider = ({defaultValue = [], children}) => {
             array[index].count += count;
             let aux = {...array[index]}; // copio el objeto
             setCart([aux]);
-            
         }else{
             // articulo nuevo en el carrito
             setCart([...cart, {...item, count}]);

@@ -2,11 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { CartView } from './CartView';
+import { Form } from '../components/Form';
+
 
 export const Cart = () => {
 
   const { cart, removeAll, totalPrice } = useCart();
-  
+
   return (
     <>
       <div className='box-cart'>
@@ -31,6 +33,9 @@ export const Cart = () => {
               <p className='box-price__price'>${totalPrice()}</p>
             </div>
           </section>
+          <div>
+            <Form />
+          </div>
         </section>
       }
     </>

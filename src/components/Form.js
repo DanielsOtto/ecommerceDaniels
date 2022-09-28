@@ -1,11 +1,37 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { getFirestore, addDoc, collection } from 'firebase/firestore';
 import { Formik } from 'formik';
+import { useCart } from '../context/CartContext';
+import Swal from 'sweetalert2';
 
 export const Form = () => {
-
+    const { cart, totalPrice, removeAll } = useCart();
+    const theDate = new Date().toISOString().slice(0, 10);
     const [send, setSend] = useState(false);
 
-    /* ID y htmlFor, iguales -- el atributo name para el input en formik es importante */
+    const cargarEnFirebase = ({ name, phone, email }) => {
+        const order = {
+            buyer: {
+                name: name,
+                phone: phone,
+                email: email
+            },
+            items: cart.map(book => ({ id: book.id, title: book.titulo, price: book.precio })),
+            date: theDate,
+            finalPrice: totalPrice()
+        }
+
+        const db = getFirestore();
+        const orderCollection = collection(db, "orders");
+        addDoc(orderCollection, order).then(({ id }) => {
+            console.log("este es el id del doc " + id);
+            Swal.fire(
+                `Compra realizada ${theDate}`,
+                `Tu código de compra es ${id}`,
+                'success'
+              )
+        });
+    }
     return (
         <article>
             <Formik
@@ -34,13 +60,15 @@ export const Form = () => {
                     }
                     return errores;
                 }}
+
                 onSubmit={(value, { resetForm }) => {
-                    resetForm();
                     /* LIMPIAR CARRITO */
-                    setSend(prev => prev = true);
-                    console.log("Formulario enviado");
+                    cargarEnFirebase(value);
+                    resetForm();
+                    setSend(true);
                     setTimeout(() => {
-                        setSend(prev => prev = false);
+                        setSend(false);
+                        removeAll();
                     }, 2500);
                 }}
             >
@@ -85,10 +113,12 @@ export const Form = () => {
                             {touched.email && errors.correo && <div className='error'>{errors.correo}</div>}
                         </div>
                         <div className='btn-box'>
-                            <button type='submit'>terminar compra</button>
+                            <button type='submit' >terminar compra</button>
+                            {console.log(send)}
                         </div>
                         {
-                            send && <div className='good-msg-box'><p className='exito'>Formulario enviado con exito!</p></div>
+                            send && <div className='good-msg-box'>
+                                <p className='exito'>La compra se ha realizado correctamente!</p></div>
                         }
                     </form>
                 )}

@@ -1,9 +1,9 @@
 import React from 'react';
 
 const PurchaseData = ({ buyer, date, finalPrice, items }) => {
-  return (
-    <>
 
+
+  return (
       <article className='buyerInfo-box'>
         <div className='buyerInfo-details'>
           <h2>datos del comprador</h2>
@@ -12,8 +12,8 @@ const PurchaseData = ({ buyer, date, finalPrice, items }) => {
           <p><span>teléfono:</span> {buyer.phone}</p>
         </div>
         <div className='purchaseInfo-details'>
-          <h3>Detalle de la compra</h3>
-          <h4>Libros solicitados: {items.length}</h4>
+          <h3>detalle de la compra</h3>
+          <h4>variedades de libros solicitados: {items.length}</h4>
           {items.map(book =>
             <div key={book.id} className='books-box'>
               <p><span>titulo:</span> {book.title}</p>
@@ -27,8 +27,6 @@ const PurchaseData = ({ buyer, date, finalPrice, items }) => {
           <p><span>precio total:</span> {finalPrice}</p>
         </div>
       </article>
-      
-    </>
   )
 }
 

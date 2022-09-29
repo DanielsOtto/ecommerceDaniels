@@ -1,7 +1,7 @@
 # Proyecto de React para el curso de CoderHouse
 
 ## Comisión 34730
-<<<<<<< HEAD
+
 
 #### En este proyecto incluyo una variedad de ejemplos de diversos conceptos de React:
 - Hooks

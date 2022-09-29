@@ -40,4 +40,16 @@
             }
         }
     }
+    .orderStatus-title{
+        .orderStatus-style{
+            color: white;
+            font-size: medium;
+            font-weight: 500;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover{
+                color: orange;
+            }
+        }
+    }
 }

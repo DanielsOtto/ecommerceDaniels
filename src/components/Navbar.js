@@ -34,6 +34,11 @@ export const Navbar = () => {
             terror</NavLink>
         </li>
       </ul>
+      <div className='orderStatus-title'>
+        <NavLink to={'/estadoCompra'} className='orderStatus-style'>
+          <p>estado del pedido</p> 
+        </NavLink>
+      </div>
       <div className='container-cart'>
         {
           cart?.length === 0 ?

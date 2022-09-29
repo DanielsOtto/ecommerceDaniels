@@ -1,0 +1,63 @@
+.OrderStatus-box{
+    background-color: gainsboro;
+    margin: 5% auto;
+    padding: 1%;
+    width: 70%;
+    h2{
+        color: goldenrod;
+        font-size: xx-large;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .OrderStatus-info{
+        padding: 1.5%;
+        font-size: large;
+    }
+    .OS-boxSearch{
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        width: 50%;
+        margin: 2% auto;
+        padding: 1.5%;
+        @include displayFlex(flex, row, wrap, center, space-between);
+        input{
+            width: 53%;
+            padding: 1.5%;
+        }
+        button{
+            width: 20%;
+            padding: 1.5%;
+            font-weight: 700;
+            text-transform: uppercase;
+            &:hover{
+                cursor: pointer;
+            }
+
+        }
+        .error-msg{
+            color: red;
+            margin: 4% auto 1% auto;
+            font-weight: 500;
+            font-size: medium;
+        }
+    }
+}
+.clear-msg{
+    p{
+        display: none;
+    }    
+}
+.appear-msg{
+    margin: 2% auto;
+    padding: 3%;
+    width: 50%;
+    height: auto;
+    border: 2px solid red;
+    p{
+        color: red;
+        font-size: xx-large;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}

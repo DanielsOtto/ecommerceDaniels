@@ -1,0 +1,69 @@
+.buyerInfo-box {
+  background-color: gainsboro;
+  width: 90%;
+  height: auto;
+  margin: 3% auto;
+  padding: 2%;
+  .buyerInfo-details {
+    @include displayFlex(flex, row, wrap, center, space-around);
+    h2 {
+      color: goldenrod;
+      width: 100%;
+      margin: 0 auto;
+      font-size: xx-large;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    p {
+      margin: 2%;
+      font-size: large;
+      text-transform: uppercase;
+      span {
+          text-decoration: underline;
+          font-weight: 500;
+      }
+    }
+  }
+  .purchaseInfo-details {
+    h3 {
+      color: goldenrod;
+      width: 100%;
+      margin: 0 auto;
+      font-size: x-large;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    h4 {
+      margin: 1.3% auto;
+      font-size: larger;
+      text-transform: uppercase;
+      text-align: left;
+    }
+    .books-box {
+        @include displayFlex(flex, row, wrap, center,center);
+        p{
+            width: 33%;
+            font-size: large;
+            text-transform: uppercase;
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+  }
+  .purchaseInfo-date__price{
+    margin: 3% auto;
+    width: 70%;
+    @include displayFlex(flex, row, wrap, center, space-between);
+    p{
+      font-size: x-large;
+      text-transform: uppercase;
+      span{
+        font-weight: 500;
+        text-decoration: underline;
+      }
+    }
+  }
+}

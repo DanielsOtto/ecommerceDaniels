@@ -1,6 +1,30 @@
-UPLOADS
-Versión 1.1d - Modifiqué el menú de navegación, la opción "todos" ya no se encuentra disponible, ni bien se entra a la página se accede a todos los libros. Agregué el componente "carrito" y su navegación. 
+# Proyecto de React para el curso de CoderHouse
 
-Versión 1.1e - Agregué el contexto del carrito, por ahora posee 3 funciones, addToCart (agrega elementos), removeAll (elimina todos los elementos) y removeOne (elimina un elemento), este último todavia no funciona. 
+## Comisión 34730
 
-Versión 1.1f - Agregué más funciones al contexto del carrito, todas funcionan correctamente.  
+#### En este proyecto incluyo una variedad de ejemplos de diversos conceptos de React:
+- Hooks
+- Navegación y Routing
+- Context
+- Conectar con Firebase 
+
+#### También utilizo otras tecnologías como:
+- Node.js
+- Javascript
+- HTML5
+- SASS
+- Firebase
+
+##### Librerias usadas: 
+- Formik
+- Sweetalert2
+
+
+Para ejecutar el proyecto simplemente hay que ejecutar en la consola:
+`npm install`
+`npm start`
+
+
+#### El proyecto esta subido en vercel, y puedo visualizarlo desde aca:
+https://ecommerce-daniels.vercel.app/
+

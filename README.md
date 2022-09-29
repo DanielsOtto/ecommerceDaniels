@@ -28,32 +28,3 @@ Para ejecutar el proyecto simplemente hay que ejecutar en la consola:
 
 #### El proyecto esta subido en vercel, y puedo visualizarlo desde aca:
 https://ecommerce-daniels.vercel.app/
-=======
-
-#### En este proyecto incluyo una variedad de ejemplos de diversos conceptos de React:
-- Hooks
-- Navegación y Routing
-- Context
-- Conectar con Firebase 
-
-#### También utilizo otras tecnologías como:
-- Node.js
-- Javascript
-- HTML5
-- SASS
-- Firebase
-
-##### Librerias usadas: 
-- Formik
-- Sweetalert2
-
-
-Para ejecutar el proyecto simplemente hay que ejecutar en la consola:
-`npm install`
-`npm start`
-
-
-#### El proyecto esta subido en vercel, y puedo visualizarlo desde aca:
-https://ecommerce-daniels.vercel.app/
-
->>>>>>> navBar

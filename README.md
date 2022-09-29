@@ -23,3 +23,7 @@
 Para ejecutar el proyecto simplemente hay que ejecutar en la consola:
 `npm install`
 `npm start`
+
+El proyecto esta subido en vercel, y puedo visualizarlo desde aca:
+
+https://ecommerce-daniels.vercel.app/

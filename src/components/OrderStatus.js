@@ -5,7 +5,7 @@ import PurchaseData from './PurchaseData';
 export const OrderStatus = () => {
     const [claseN, setClaseN] = useState('clear-msg');
     const [orderFound, setOrderFound] = useState({});
-    const [input, setInput] = useState(" ");
+    const [input, setInput] = useState("");
     const [errorCode, setErrorCode] = useState(false);
 
 
